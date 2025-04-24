@@ -16,7 +16,7 @@ AddEventHandler("Ori-GangLobby:openMenu", function(playerBucket)
             title = bucket.name,
             description = bucket.description,
             icon = "users",
-            disabled = (bucket.id == playerBucket), -- Show but disable the current bucket
+            disabled = (bucket.id == playerBucket)
             onSelect = function()
                 if bucket.id ~= playerBucket then
                     TriggerServerEvent("Ori-GangLobby:setBucket", bucket.id, bucket.coords, Config.ResetInventory)
